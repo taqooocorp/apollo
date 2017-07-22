@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.taqooo.crawler.dao.PoemDao">
+    <insert id="addPoem">
+        INSERT INTO poem (<include refid="ShareFragment.POEM_ENTITY_NOID"/>)
+        VALUES (
+        #{title},
+        #{dynasty},
+        #{author},
+        #{content},
+        #{originId}
+        )
+        <selectKey resultType="java.lang.Integer" keyProperty="id">
+            SELECT @@IDENTITY AS id
+        </selectKey>
+    </insert>
+
+    <select id="countPoems" resultType="java.lang.Integer">
+        SELECT count(*) FROM poem
+    </select>
+
+    <select id="listPoemIds" resultType="java.lang.Integer">
+        SELECT id FROM poem
+        WHERE id >= #{startId}
+        LIMIT #{limit}
+    </select>
+
+    <select id="listPoemOriginIds" resultType="java.lang.Integer">
+        SELECT origin_id FROM poem
+        LIMIT #{offset},#{limit}
+    </select>
+</mapper>

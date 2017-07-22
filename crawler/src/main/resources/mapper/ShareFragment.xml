@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ShareFragment">
+    <resultMap id="cnCharMap" type="com.taqooo.crawler.model.CnCharEntity">
+        <id column="id" property="id" javaType="java.lang.Integer"/>
+        <result column="name" property="name"/>
+        <result column="pinyin" property="pinyin"/>
+    </resultMap>
+
+    <resultMap id="poemMap" type="com.taqooo.crawler.model.PoemEntity">
+        <id column="id" property="id" javaType="java.lang.Integer"/>
+        <result column="title" property="title"/>
+        <result column="dynasty" property="dynasty"/>
+        <result column="author" property="author"/>
+        <result column="content" property="content"/>
+        <result column="origin_id" property="originId"/>
+    </resultMap>
+
+    <sql id="CN_CHAR_ENTITY_NOID">
+        name,
+        pinyin,
+        simdesc
+    </sql>
+
+    <sql id="POEM_ENTITY_NOID">
+        title,
+        dynasty,
+        author,
+        content,
+        origin_id
+    </sql>
+</mapper>

@@ -1,0 +1,36 @@
+
+
+
+2017-07-23 04:02:40.438:INFO:oejs.Server:main: jetty-9.2.6.v20141205
+2017-07-23 04:02:40.599:INFO:/:main: Initializing Spring root WebApplicationContext
+七月 23, 2017 4:02:40 上午 org.springframework.web.context.ContextLoader initWebApplicationContext
+信息: Root WebApplicationContext: initialization started
+七月 23, 2017 4:02:40 上午 org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+信息: Refreshing Root WebApplicationContext: startup date [Sun Jul 23 04:02:40 CST 2017]; root of context hierarchy
+七月 23, 2017 4:02:40 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from URL [file:/Users/fnn/workspace/apollo/moon/target/classes/applicationContext.xml]
+七月 23, 2017 4:02:41 上午 org.springframework.web.context.ContextLoader initWebApplicationContext
+信息: Root WebApplicationContext: initialization completed in 595 ms
+2017-07-23 04:02:41.248:INFO:oejsh.ContextHandler:main: Started o.e.j.w.WebAppContext@79b4d0f{/,file:/Users/fnn/workspace/apollo/moon/src/main/webapp/,AVAILABLE}
+2017-07-23 04:02:41.249:INFO:oejs.AbstractNCSARequestLog:main: Opened /Users/fnn/workspace/apollo/logs/jetty.request.log.2017-07-23
+2017-07-23 04:02:41.269:INFO:oejs.ServerConnector:main: Started ServerConnector@49e5f737{HTTP/1.1}{0.0.0.0:8410}
+2017-07-23 04:02:41.270:INFO:oejs.Server:main: Started @1246ms
+2017-07-23 04:03:01.644:INFO:/:qtp1268447657-19: Initializing Spring FrameworkServlet 'dispatcherServlet'
+七月 23, 2017 4:03:01 上午 org.springframework.web.servlet.DispatcherServlet initServletBean
+信息: FrameworkServlet 'dispatcherServlet': initialization started
+七月 23, 2017 4:03:01 上午 org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+信息: Refreshing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Sun Jul 23 04:03:01 CST 2017]; parent: Root WebApplicationContext
+七月 23, 2017 4:03:01 上午 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+信息: Loading XML bean definitions from class path resource [spring-servlet.xml]
+七月 23, 2017 4:03:01 上午 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+信息: Mapped "{[/ || /api/v1/name/gen],methods=[GET]}" onto public com.alibaba.fastjson.JSONObject com.taqooo.moon.controller.ExampleController.test()
+七月 23, 2017 4:03:02 上午 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+信息: Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Sun Jul 23 04:03:01 CST 2017]; parent: Root WebApplicationContext
+七月 23, 2017 4:03:02 上午 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+信息: Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Sun Jul 23 04:03:01 CST 2017]; parent: Root WebApplicationContext
+七月 23, 2017 4:03:02 上午 org.springframework.web.servlet.DispatcherServlet initServletBean
+信息: FrameworkServlet 'dispatcherServlet': initialization completed in 613 ms
+七月 23, 2017 4:03:02 上午 org.springframework.web.servlet.PageNotFound noHandlerFound
+警告: No mapping found for HTTP request with URI [/test] in DispatcherServlet with name 'dispatcherServlet'
+七月 23, 2017 4:03:02 上午 org.springframework.web.servlet.PageNotFound noHandlerFound
+警告: No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
