@@ -1,6 +1,6 @@
 package com.taqooo.crawler.dao;
 
-import com.taqooo.crawler.model.PoemEntity;
+import com.taqooo.crawler.model.PoemModel;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -15,11 +15,11 @@ import java.util.List;
  */
 @Repository
 public interface PoemDao {
-    Integer addPoem(PoemEntity poemEntity);
+    Integer addPoem(PoemModel poem);
 
-    Integer countPoems();
+    Integer countPoems(String anthology);
 
-    List<Integer> listPoemIds(@Param("id") int startId, @Param("limit") int limit);
+    List<Integer> listPoemIds(@Param("anthology") String anthology, @Param("id") int startId, @Param("limit") int limit);
 
-    List<Integer> listPoemOriginIds(@Param("offset") int offset, @Param("limit") int limit);
+    List<Integer> listPoemOriginIds(@Param("anthology") String anthology, @Param("offset") int offset, @Param("limit") int limit);
 }

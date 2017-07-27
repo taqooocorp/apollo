@@ -1,8 +1,7 @@
 package com.taqooo.crawler.service;
 
-import com.taqooo.crawler.model.PoemEntity;
+import com.taqooo.crawler.model.PoemModel;
 
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -13,13 +12,24 @@ import java.util.Set;
  * Desc    :
  */
 public interface PoemService {
-    Integer addPoem(PoemEntity poemEntity);
+    /**
+     * 存储诗词
+     * @param poemModel
+     * @return
+     */
+    Integer addPoem(PoemModel poemModel);
 
-    Integer countPoem();
+    /**
+     * 统计数据库中某个选集中的诗词总数
+     * @param anthology
+     * @return
+     */
+    Integer countPoem(String anthology);
 
-    List<Integer> listPoemIds(Integer startId, Integer limit);
-
-    List<Integer> listAllPoemIds();
-
-    Set<Integer> listAllPoemOriginIds();
+    /**
+     * 列出某个选集中的所有原始id
+     * @param anthology
+     * @return
+     */
+    Set<Integer> listAllPoemOriginIds(String anthology);
 }

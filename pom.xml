@@ -27,10 +27,16 @@
         <mysql-connector.version>6.0.6</mysql-connector.version>
         <commons-codec.version>1.10</commons-codec.version>
         <commons-collections4.version>4.1</commons-collections4.version>
+        <commons-lang3.version>3.6</commons-lang3.version>
         <htmlparser.version>2.1</htmlparser.version>
     </properties>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
             <!--htmlparser-->
             <dependency>
                 <groupId>org.htmlparser</groupId>
